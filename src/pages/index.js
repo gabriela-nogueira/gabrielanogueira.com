@@ -1,22 +1,58 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import WrapperPost from "../components/WrapperPost"
+import ItemPost from "../components/ItemPost"
+import Footer from "../components/Footer"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+
+
+const IndexPage = () => {
+  const  { allMarkdownRemark } = useStaticQuery(graphql`
+  query PostList {
+    allMarkdownRemark (sort: {fields: frontmatter___date, order:DESC}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+            tag
+            title
+          }
+          timeToRead
+        }
+      }
+    }
+  }  
+  `
+  )
+
+  const postList = allMarkdownRemark.edges
+
+  return (
+    <Layout>
+    <SEO title="Gabriela Nogueira | Blog sobre Data Science e Tecnologia" ></SEO>
+    {postList.map(({
+      node : {
+        frontmatter: {date, tag, title},
+        timeToRead,
+        fields : {slug}
+      },
+    }) => (
+    <ItemPost
+    slug={slug}
+    title={title}
+    date={date}
+    timeToRead={timeToRead}
+    tag={tag}
+    />
+    ))}
   </Layout>
-)
+  )
+}
 
 export default IndexPage
