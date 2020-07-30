@@ -1,6 +1,5 @@
 import React from "react"
 import * as S from './style'
-import { Link } from 'gatsby'
 import Img from "./logo2.png"
 
 const Header = ({ children }) => {
