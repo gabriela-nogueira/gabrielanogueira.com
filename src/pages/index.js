@@ -2,10 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import WrapperPost from "../components/WrapperPost"
+import SEO from "../components/Seo"
 import ItemPost from "../components/ItemPost"
-import Footer from "../components/Footer"
 
 
 

@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import Particles from 'react-particles-js'
+import styled from "./node_modules/styled-components"
+import Particles from './node_modules/react-particles-js'
 
 export const LayoutWrapper = styled.div`
   background-color:black;
