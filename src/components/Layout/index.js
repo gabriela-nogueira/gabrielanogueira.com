@@ -1,7 +1,7 @@
-import React from "./node_modules/react"
-import * as S from './style'
+import React from "react"
+import * as S from "./style"
 import GlobalStyles from "../../styles/global"
-import Particles from './node_modules/react-particles-js'
+import Particles from "react-particles-js"
 import Header from "../Header"
 import Footer from "../Footer"
 
