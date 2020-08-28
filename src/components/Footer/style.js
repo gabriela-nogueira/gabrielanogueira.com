@@ -8,7 +8,8 @@ export const FooterWrapper = styled.div`
     display: table-row;
     position:absolute;
     background-color:black;
-    margin-top: 0rem;
+    margin:auto;
+    margin-top:1.5rem;
 `
 
 export const Credito = styled.div`

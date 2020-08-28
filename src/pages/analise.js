@@ -5,12 +5,10 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import ItemPost from "../components/ItemPost"
 
-
-
-const IndexPage = () => {
-  const  { allMarkdownRemark } = useStaticQuery(graphql`
-  query PostList {
-    allMarkdownRemark (sort: {fields: frontmatter___date, order:DESC}) {
+const AnalisePage = () => {
+    const  { allMarkdownRemark } = useStaticQuery(graphql`
+  query ListaAnalise {
+    allMarkdownRemark(filter: {frontmatter: {tag: {eq: "analise"}}}, sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
           fields {
@@ -20,6 +18,7 @@ const IndexPage = () => {
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             tag
             title
+            imagem
           }
           timeToRead
         }
@@ -29,14 +28,14 @@ const IndexPage = () => {
   `
   )
 
-  const postList = allMarkdownRemark.edges
+  const analisePost = allMarkdownRemark.edges
 
   return (
     <Layout>
     <SEO title="Gabriela Nogueira | Blog sobre Data Science e Tecnologia" ></SEO>
-    {postList.map(({
+    {analisePost.map(({
       node : {
-        frontmatter: {date, tag, title},
+        frontmatter: {date, tag, title, imagem},
         timeToRead,
         fields : {slug}
       },
@@ -47,10 +46,11 @@ const IndexPage = () => {
     date={date}
     timeToRead={timeToRead}
     tag={tag}
+    image={imagem}
     />
     ))}
   </Layout>
   )
 }
 
-export default IndexPage
+export default AnalisePage

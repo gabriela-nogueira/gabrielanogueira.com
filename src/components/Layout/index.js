@@ -4,6 +4,7 @@ import GlobalStyles from "../../styles/global"
 import Particles from "react-particles-js"
 import Header from "../Header"
 import Footer from "../Footer"
+import Pagination from "../Pagination"
 
 
 const Layout = ({ children }) => {
@@ -72,7 +73,6 @@ const Layout = ({ children }) => {
 	   </S.LayoutMain>
 	   
     </S.LayoutWrapper>
-	<Footer/>
 	</>
   )
 }

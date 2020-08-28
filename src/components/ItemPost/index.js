@@ -1,17 +1,17 @@
 import React from "react"
 import * as S from './style'
 import { Link } from 'gatsby'
-import img2 from "../../../src/images/post-2.jpg"
+import img2 from "../../../static/assets/images/post-1.jpg"
 import PropTypes from 'prop-types'
 
-const ItemPost = ({slug,title, date, timeToRead, tag }) => (
+const ItemPost = ({slug,title, date, timeToRead, tag, image}) => (
     <>
     <S.Conteudo>
     <S.PostItemLink to={slug}>
         <S.PostItemWrapper>
             <S.PostItemInfo>
                 <S.Container>
-                    <S.imgTeste src={img2}></S.imgTeste>
+                    <S.imgTeste src={image}></S.imgTeste>
                     <S.Top></S.Top>
                     <S.titleTeste>{title}</S.titleTeste>
                     <S.dataPost>{date} • {timeToRead} min de leitura</S.dataPost>
@@ -30,6 +30,7 @@ ItemPost.propTypes = {
     date: PropTypes.string.isRequired,
     timeToRead: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
+    image: PropTypes.string
 }
 
 export default ItemPost

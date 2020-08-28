@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 export const Conteudo = styled.div`
     display: grid;
@@ -106,6 +107,16 @@ export const imgTeste = styled.img`
     filter:grayscale(100%) contrast(150%);
 `
 
+export const ImgGt = styled(Img)`
+    display: block;
+    width: 31.25rem;
+    height: 300px;
+    border-radius:4px;
+    object-fit: cover;
+    filter:grayscale(100%) contrast(150%);
+`
+
+
 export const Top = styled.div`
     position: absolute;
     top: 0;
@@ -127,7 +138,7 @@ export const Top = styled.div`
 export const titleTeste = styled.div`
     position: absolute;
     float:left;
-    color:#2f2519;
+    color:black;
     font-size:1.75rem;
     top:60%;
     padding:1.5rem;

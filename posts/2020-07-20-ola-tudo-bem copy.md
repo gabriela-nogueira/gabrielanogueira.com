@@ -1,8 +1,8 @@
 ---
 date: 2020-07-30 17:00:00
-title: "Isso é um teste"
-tag: "analise"
-imagem: "post-1.jpg"
+title: "Machine Learning"
+tag: "programação"
+imagem: "post-1.gif"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a elit sit amet ipsum hendrerit tincidunt. Nulla tempor, erat nec ultricies interdum, purus orci pretium quam, porttitor tempor enim velit quis nunc. Praesent eu interdum turpis, non tincidunt nibh. Fusce posuere metus dolor, sit amet accumsan ante interdum ac. Nunc sed libero eleifend, scelerisque orci a, bibendum nisi. Cras enim ex, hendrerit vel ultrices at, tincidunt sit amet neque. Nunc tempus tellus quis semper aliquam. Vivamus viverra, enim ac consequat facilisis, nunc turpis lacinia nisl, sed porttitor neque nunc non sem. Fusce volutpat tristique enim ac tristique. Phasellus eget consectetur odio, quis vehicula risus. Pellentesque tristique tellus non ex blandit placerat. Suspendisse sit amet tellus sapien. Quisque non tellus nec mauris vestibulum vehicula.

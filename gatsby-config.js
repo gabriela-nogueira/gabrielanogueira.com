@@ -10,10 +10,19 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `uploads`,
+        path: `${__dirname}/static/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,8 +37,24 @@ module.exports = {
         plugins: [
           {
           resolve: `gatsby-remark-prismjs`,
-        },       
+        },   
+        {
+          resolve: `gatsby-remark-relative-images`,
+          options: {
+            name: "uploads"
+          }
+        },    
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 900,
+            linkImagesToOriginal: false,
 
+          }
+        },  
+        {
+          resolve: `gatsby-remark-lazy-load`,
+        }, 
         ],
       },
     },

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout'
 import SEO from "../components/seo"
+import Footer from '../components/Footer'
 import * as S from "../components/Post/style"
 
 const BlogPost = ({ data }) => {
@@ -20,6 +21,7 @@ const BlogPost = ({ data }) => {
         </S.MainContent>
         </S.PostWrapper>
         </Layout>
+        <Footer></Footer>
         
         </>
     )

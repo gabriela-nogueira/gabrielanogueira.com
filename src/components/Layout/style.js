@@ -5,11 +5,11 @@ export const LayoutWrapper = styled.div`
   color:white;
   display:flex;
   width:100%;
+  position:relative;
 `
 
 export const EffectLayout = styled.div`
   width:100%;
-  height:40%;
   position: absolute;
 `
 

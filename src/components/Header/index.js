@@ -13,10 +13,11 @@ const Header = ({ children }) => {
             <S.LinkOption to='/'> Inicio </S.LinkOption>
             <S.LinkOption to='/'> Sobre </S.LinkOption>
             <S.LinkTeste href="https://github.com/gabriela-nogueira" target="_blank"> Github</S.LinkTeste>
-            <S.LinkOption to='/'> Analise</S.LinkOption>
-            <S.LinkOption to='/'> Engenharia</S.LinkOption>
-            <S.LinkOption to='/'> Visualização</S.LinkOption>
-            <S.LinkOption to='/'> Programação</S.LinkOption>
+            <S.LinkOption to='/projetos'> Projetos</S.LinkOption>
+            <S.LinkOption to='/analise'> Analise</S.LinkOption>
+            <S.LinkOption to='/engenharia'> Engenharia</S.LinkOption>
+            <S.LinkOption to='/visualizacao'> Visualização</S.LinkOption>
+            <S.LinkOption to='/programacao'> Programação</S.LinkOption>
         </S.Option>
         </S.navBar>
         </S.HeadWrapper>

@@ -6,7 +6,7 @@ const Footer = ({children}) => {
         <>
         <S.FooterWrapper>
             <S.BlocoFooter>
-            <S.Credito> 2020 | Made with Love - By <S.LinkExterno href="https://github.com/gabriela-nogueira">Gabi</S.LinkExterno></S.Credito>
+            <S.Credito> 2020 | Made with love - By <S.LinkExterno href="https://github.com/gabriela-nogueira">Gabi</S.LinkExterno></S.Credito>
             </S.BlocoFooter>
         </S.FooterWrapper>
         </>
